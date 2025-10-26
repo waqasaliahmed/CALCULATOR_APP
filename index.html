@@ -3,21 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Calculator_App</title>
+  <title>Calculator_App - Scientific</title>
 
-  <!-- Link to external CSS file -->
+  <!-- Link CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Main Calculator Container -->
+  <!-- Main Calculator -->
   <div class="calculator">
-    <!-- Display Screen -->
-    <input type="text" class="display" id="display" disabled>
+    <input placeholder="calculate " type="text" class="display" id="display" disabled>
 
-    <!-- Calculator Buttons -->
     <div class="buttons">
-      <!-- Each button calls a JavaScript function when clicked -->
+      <!-- Top scientific row -->
+      <button onclick="appendFunction('sin(')">sin</button>
+      <button onclick="appendFunction('cos(')">cos</button>
+      <button onclick="appendFunction('tan(')">tan</button>
+      <button onclick="appendFunction('Math.log10(')">log</button>
+
+      <!-- Scientific row 2 -->
+      <button onclick="appendFunction('Math.sqrt(')">√</button>
+      <button onclick="appendFunction('**2')">x²</button>
+
+      <button onclick="appendFunction('**')">xʸ</button>
+      <button onclick="appendFunction('Math.PI')">π</button>
+
+      <!-- Numbers and operators -->
       <button onclick="appendValue('7')">7</button>
       <button onclick="appendValue('8')">8</button>
       <button onclick="appendValue('9')">9</button>
@@ -36,14 +47,14 @@
       <button onclick="appendValue('0')">0</button>
       <button onclick="appendValue('.')">.</button>
       <button class="operator" onclick="appendValue('+')">+</button>
+      <button onclick="deleteLast()">⌫</button>
 
       <button class="clear" onclick="clearDisplay()">C</button>
       <button class="equal" onclick="calculateResult()">=</button>
     </div>
   </div>
 
-  <!-- Link to external JavaScript file -->
+  <!-- Link JS -->
   <script src="script.js"></script>
-
 </body>
 </html>
